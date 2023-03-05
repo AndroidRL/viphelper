@@ -31,7 +31,7 @@ public class SplashActivity extends AppCompatActivity {
 
     private void FirebaseGetId() {
         if (isOnline()) {
-            Splash.next_activity_animation("Test", "1", this, new Intent(this, MainActivity.class));
+            Splash.next_activity_animation("Testing", "1", this, new Intent(this, MainActivity.class));
             return;
         }
         Dialog dialog = new Dialog(SplashActivity.this);

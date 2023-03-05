@@ -3,21 +3,32 @@ package com.appwood.mylibrarys;
 import static ProMex.classs.Utils.apiii.DEc;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.telephony.TelephonyManager;
-import android.widget.Toast;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
 
 import com.applovin.mediation.MaxAd;
 import com.applovin.mediation.MaxAdListener;
 import com.applovin.mediation.MaxError;
 import com.applovin.mediation.ads.MaxInterstitialAd;
+import com.bumptech.glide.Glide;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
@@ -400,7 +411,7 @@ public class Splash extends AppCompatActivity {
             public void run() {
                 if (customads_status) {
                     NextADSVIP();
-                 } else {
+                } else {
                     Custom_Call_Intent();
                 }
             }
@@ -478,15 +489,15 @@ public class Splash extends AppCompatActivity {
                 NextAnimationActivity.AutoLoadFBInterID = 1;
                 NextAnimationActivity.Google_failed_FacebookInterLoad(context_x);
             }
-
-             MaxInterstitialAd interstitialAd = new MaxInterstitialAd(MyHelpers.getAppLovinInter(), (Activity) context_x);
+            MaxInterstitialAd interstitialAd = new MaxInterstitialAd(MyHelpers.getAppLovinInter(), (Activity) context_x);
             interstitialAd.setListener(new MaxAdListener() {
                 @Override
                 public void onAdLoaded(MaxAd ad) {
-                     if (interstitialAd.isReady()) {
+                    if (interstitialAd.isReady()) {
                         interstitialAd.showAd();
                     }
                 }
+
                 @Override
                 public void onAdDisplayed(MaxAd ad) {
 
@@ -515,9 +526,7 @@ public class Splash extends AppCompatActivity {
             });
             interstitialAd.loadAd();
         } else if (MyHelpers.getCustomEnable().equals("1")) {
-            MyHelpers.CustomIntent = intent_x;
-            context_x.startActivity(new Intent(context_x, CustomAdsInterActivity.class));
-            ((Activity) context_x).finish();
+            CustopadsDialog();
         } else {
             NextIntent(context_x, intent_x);
         }
@@ -607,7 +616,6 @@ public class Splash extends AppCompatActivity {
         }
     }
 
-
     public static void CustomAds() {
         AsyncHttpClient asyncHttpClient = new AsyncHttpClient();
         asyncHttpClient.addHeader(DEc(Util.dojnghdklfjngkdfjng), DEc(Util.dfhdlkhmdflkhnmlkdfhm));
@@ -616,7 +624,6 @@ public class Splash extends AppCompatActivity {
             public void onStart() {
                 super.onStart();
             }
-
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
                 super.onSuccess(statusCode, headers, response);
@@ -630,12 +637,65 @@ public class Splash extends AppCompatActivity {
                     e.printStackTrace();
                 }
             }
+
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
                 super.onFailure(statusCode, headers, responseString, throwable);
             }
         });
+
     }
 
+    public static void CustopadsDialog() {
+        int ads_number = MyHelpers.getRandomNumber(0, Splash.adsModals.size() - 1);
 
+        Dialog dialog = new Dialog(context_x);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setCancelable(false);
+        dialog.setContentView(R.layout.custom_openads);
+        dialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+
+        dialog.findViewById(R.id.full_view).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    context_x.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + Splash.adsModals.get(ads_number).getApp_name())));
+                } catch (ActivityNotFoundException anfe) {
+                    context_x.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + Splash.adsModals.get(ads_number).getApp_name())));
+                }
+            }
+        });
+        dialog.findViewById(R.id.next_view).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NextIntent(context_x, intent_x);
+            }
+        });
+
+        ImageView app_icon1 = dialog.findViewById(R.id.app_icon1);
+        ImageView app_icon = dialog.findViewById(R.id.app_icon);
+        ImageView ad_banner = dialog.findViewById(R.id.ad_banner);
+        TextView app_name = dialog.findViewById(R.id.app_name);
+        TextView app_name1 = dialog.findViewById(R.id.app_name1);
+        TextView app_shot = dialog.findViewById(R.id.app_shot);
+
+        Glide.with(context_x).load(Splash.adsModals.get(ads_number).getApp_logo()).into(app_icon1);
+        Glide.with(context_x).load(Splash.adsModals.get(ads_number).getApp_logo()).into(app_icon);
+        Glide.with(context_x).load(Splash.adsModals.get(ads_number).getApp_banner()).into(ad_banner);
+        app_name.setText(Splash.adsModals.get(ads_number).getAd_app_name());
+        app_name1.setText(Splash.adsModals.get(ads_number).getAd_app_name());
+        app_shot.setText(Splash.adsModals.get(ads_number).getApp_description());
+
+        int number  = Splash.getRandom(0,MyHelpers.color_array.size() - 1);
+        try {
+            LinearLayout btn_layout = (LinearLayout) dialog.findViewById(R.id.btn_layout);
+            AppCompatImageView img_install = (AppCompatImageView) dialog.findViewById(R.id.img_install);
+            btn_layout.setBackgroundColor(Color.parseColor(MyHelpers.color_array.get(number)));
+            img_install.setSupportBackgroundTintList(ColorStateList.valueOf(Color.parseColor(MyHelpers.color_array.get(number))));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        dialog.show();
+    }
 }

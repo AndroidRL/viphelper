@@ -19,6 +19,7 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 
@@ -40,6 +41,7 @@ public class MyHelpers extends Application {
         }
         return application;
     }
+   public static ArrayList<String> color_array = new ArrayList<>();
 
     public static MyHelpers getInstant() {
         return instance;
@@ -75,6 +77,24 @@ public class MyHelpers extends Application {
         editor = sharedPreferences.edit();
 
         super.onCreate();
+
+
+        color_array.add("#ffbf00");
+        color_array.add("#e52b50");
+        color_array.add("#9966cc");
+        color_array.add("#a4c639");
+        color_array.add("#5d8aa8");
+        color_array.add("#6e7f80");
+        color_array.add("#21abcd");
+        color_array.add("#fe6f5e");
+        color_array.add("#cb4154");
+        color_array.add("#d19fe8");
+        color_array.add("#de3163");
+        color_array.add("#996515");
+        color_array.add("#008b8b");
+        color_array.add("#ffa07a");
+        color_array.add("#778899");
+        color_array.add("#e25098");
     }
 
     public static void setBackAdsOnOff(String BackAdsOnOff) {

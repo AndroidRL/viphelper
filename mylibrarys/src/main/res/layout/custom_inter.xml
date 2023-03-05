@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/main_view"
     android:background="#fff">
 
     <LinearLayout
@@ -12,29 +12,31 @@
         android:layout_above="@+id/btn_layout"
         android:orientation="vertical">
 
-        <RelativeLayout
+        <ImageView
+            android:id="@+id/ad_banner"
             android:layout_width="match_parent"
-            android:layout_height="270dp">
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/updateapp" />
 
-            <ImageView
-                android:id="@+id/ad_banner"
-                android:layout_width="match_parent"
-                android:layout_height="230dp"
-                android:layout_gravity="center"
-                android:scaleType="fitXY"
-                android:src="@drawable/updateapp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#7C7A7A"
+            android:padding="3dp"
+            android:text="AD"
+            android:textColor="#fff"
+            android:textSize="7dp" />
 
-            <ImageView
-                android:id="@+id/app_icon"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_alignParentBottom="true"
-                android:layout_centerInParent="true"
-                android:elevation="10dp"
-                android:src="@drawable/common_google_signin_btn_icon_dark" />
-
-
-        </RelativeLayout>
+        <ImageView
+            android:id="@+id/app_icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:elevation="10dp"
+            android:src="@drawable/common_google_signin_btn_icon_dark" />
 
         <TextView
             android:id="@+id/app_name"
@@ -45,8 +47,8 @@
             android:layout_marginTop="20dp"
             android:gravity="center"
             android:maxLines="2"
-            android:text="Check Credit Score "
-            android:textColor="#656565"
+                android:text=" "
+            android:textColor="#252525"
             android:textSize="22dp"
             android:textStyle="bold" />
 
@@ -56,11 +58,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginHorizontal="15dp"
-            android:layout_marginTop="15dp"
             android:gravity="center"
             android:includeFontPadding="false"
-            android:text="Online and alsjk ngflskdfnsldkfn  sdlfknakjn bsdkjfsdkljf nskjdf bsdlkjfbsd klsfjdbs sadkjfb askdjfb safkb sakjfdb"
-            android:textColor="#000"
+            android:text=" "
+            android:textColor="#535353"
             android:textSize="16dp"
             android:visibility="visible" />
 
@@ -70,40 +71,74 @@
     <LinearLayout
         android:id="@+id/btn_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
+        android:layout_height="70dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
+        android:background="#E35757"
+        android:elevation="10dp"
         android:orientation="horizontal"
         android:paddingHorizontal="10dp"
-        android:paddingVertical="10dp">
+        android:paddingVertical="10dp"
+        android:visibility="visible">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_cancel"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:background="@drawable/roundads"
-            android:backgroundTint="#ECE9E9"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
             android:gravity="center"
-            android:text="Close"
-            android:textColor="#000"
-            android:textSize="20dp" />
+            android:orientation="vertical">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_install"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:background="@drawable/roundads"
-            android:backgroundTint="#000"
-             android:gravity="center"
-            android:text="Install"
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_playstore" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Google Play"
+                android:textColor="#fff"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="5dp"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_install"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/ic_round"
+            android:backgroundTint="#E84242"
+            android:padding="20dp"
+            android:src="@drawable/ic_download"
+            android:tint="#fff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="INSTALL"
             android:textColor="#fff"
-            android:textSize="20dp" />
-
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -112,24 +147,14 @@
         android:id="@+id/close"
         android:layout_width="22dp"
         android:layout_height="22dp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_round"
+        android:backgroundTint="#2B2A2A"
         android:elevation="10dp"
         android:padding="2dp"
-        android:layout_margin="10dp"
-        android:background="@drawable/close_bg"
-        android:backgroundTint="#2B2A2A"
         android:src="@drawable/close"
         app:tint="#fff" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:background="#2B2A2A"
-        android:layout_margin="5dp"
-        android:text="AD"
-        android:textColor="#fff"
-        android:padding="3dp"
-        android:textSize="7dp" />
 
 
 </RelativeLayout>

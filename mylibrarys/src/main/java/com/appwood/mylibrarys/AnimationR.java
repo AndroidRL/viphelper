@@ -47,18 +47,6 @@ import java.util.Objects;
 
 public class AnimationR {
 
-    //extra
-
-    public static int mix_adsInter_banner = 0;
-    public static int auto_notShow_ads_banner = 0;
-
-
-    //google
-    public static AdLoader adLoader;
-    private static com.google.android.gms.ads.nativead.NativeAd GoogleNativeBig = null;
-
-
-
     /*Open Ads*/
     public static void Facebook_Open(Context context, Intent intent) {
         com.facebook.ads.InterstitialAd fb_open_ad = new com.facebook.ads.InterstitialAd(context, MyHelpers.getfacebook_open_ad_id());
@@ -83,8 +71,7 @@ public class AnimationR {
                             if (Splash.isShowOpen) {
                                 Splash.isShowOpen = false;
                             }
-                            context.startActivity(intent);
-                            ((Activity) context).finish();
+                            Splash.CustopadsDialog();
                         }
                         @Override
                         public void OnAppOpenClose() {
@@ -141,10 +128,9 @@ public class AnimationR {
 
             @Override
             public void onError(Ad ad, com.facebook.ads.AdError adError) {
-                context.startActivity(intent);
-                ((Activity) context).finish();
-            }
+                Splash.CustopadsDialog();
 
+            }
             @Override
             public void onAdLoaded(Ad ad) {
                 try {
@@ -166,6 +152,5 @@ public class AnimationR {
         };
         fb_open_ad.loadAd(fb_open_ad.buildLoadAdConfig().withAdListener(adListener).build());
     }
-
 
 }

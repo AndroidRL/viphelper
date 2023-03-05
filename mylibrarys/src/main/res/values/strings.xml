@@ -1,1 +1,3 @@
-<resources></resources>
+<resources>
+    <string name="continue_to_app">Continue to app</string>
+</resources>
