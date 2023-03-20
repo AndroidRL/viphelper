@@ -8,10 +8,9 @@
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
 
-    <application android:name=".MyHelpers">
+    <application android:name=".MyProHelperClass">
         <activity android:name=".UpdateAppActivity" />
         <activity android:name=".Splash" />
-        <activity android:name=".CustomAdsInterActivity" />
 
         <meta-data
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"

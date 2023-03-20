@@ -1,0 +1,75 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:2:1-27:12
+	package
+		ADDED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:3:5-37
+		INJECTED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml
+		INJECTED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:6:5-79
+	android:name
+		ADDED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:6:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:7:5-76
+	android:name
+		ADDED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:7:22-73
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:8:5-76
+	android:name
+		ADDED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:8:22-73
+uses-permission#com.google.android.gms.permission.AD_ID
+ADDED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:9:5-79
+	android:name
+		ADDED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:9:22-76
+application
+ADDED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:11:5-25:19
+	android:name
+		ADDED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:11:18-50
+activity#com.appwood.mylibrarys.UpdateAppActivity
+ADDED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:12:9-55
+	android:name
+		ADDED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:12:19-52
+activity#com.appwood.mylibrarys.Splash
+ADDED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:13:9-44
+	android:name
+		ADDED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:13:19-41
+meta-data#com.google.android.gms.ads.AD_MANAGER_APP
+ADDED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:15:9-17:36
+	android:value
+		ADDED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:17:13-33
+	android:name
+		ADDED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:16:13-69
+meta-data#applovin.sdk.key
+ADDED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:19:9-21:118
+	android:value
+		ADDED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:21:13-115
+	android:name
+		ADDED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:20:13-44
+meta-data#applovin.sdk.verbose_logging
+ADDED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:22:9-24:36
+	android:value
+		ADDED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:24:13-33
+	android:name
+		ADDED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:23:13-56
+uses-sdk
+INJECTED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml
+INJECTED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml
+INJECTED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml
+INJECTED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml
+		ADDED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml
+		INJECTED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml
+		ADDED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml
+		INJECTED from D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml

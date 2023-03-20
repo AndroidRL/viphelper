@@ -1,6 +1,5 @@
 package animation.almonten.koola.AdsCode;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -31,7 +30,7 @@ public class SplashActivity extends AppCompatActivity {
 
     private void FirebaseGetId() {
         if (isOnline()) {
-            Splash.next_activity_animation("Testing", "1", this, new Intent(this, MainActivity.class));
+            Splash.StartAnimation(this, new Intent(this, MainActivity.class),"Test", "1" );
             return;
         }
         Dialog dialog = new Dialog(SplashActivity.this);

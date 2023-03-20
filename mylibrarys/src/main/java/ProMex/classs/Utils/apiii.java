@@ -73,7 +73,7 @@ public class apiii {
         sb.append(HEX.charAt((b >> 4) & 0x0f)).append(HEX.charAt(b & 0x0f));
     }
 
-    public static String DEc(String aa) {
+    public static String DECode(String aa) {
         String decrypted = "";
         try {
             decrypted = apiii.decrypt(aa);

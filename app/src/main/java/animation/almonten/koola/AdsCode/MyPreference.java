@@ -11,8 +11,8 @@ public class MyPreference {
     Context context;
 
     public MyPreference(Context context) {
-        this.context = com.appwood.mylibrarys.MyHelpers.getInstanceHelp();
-        sharedPreferences = com.appwood.mylibrarys.MyHelpers.getInstanceHelp().getSharedPreferences("datastore", Context.MODE_PRIVATE);
+        this.context = com.appwood.mylibrarys.MyProHelperClass.getInstanceHelp();
+        sharedPreferences = com.appwood.mylibrarys.MyProHelperClass.getInstanceHelp().getSharedPreferences("datastore", Context.MODE_PRIVATE);
         editor = sharedPreferences.edit();
     }
 

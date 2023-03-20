@@ -1,0 +1,57 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.appwood.mylibrarys" >
+4
+5    <uses-sdk
+6        android:minSdkVersion="21"
+6-->D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml
+7        android:targetSdkVersion="33" />
+7-->D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml
+8
+9    <uses-permission android:name="android.permission.INTERNET" />
+9-->D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:5:5-67
+9-->D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:5:22-64
+10    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+10-->D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:6:5-79
+10-->D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:6:22-76
+11    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+11-->D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:7:5-76
+11-->D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:7:22-73
+12    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+12-->D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:8:5-76
+12-->D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:8:22-73
+13    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+13-->D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:9:5-79
+13-->D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:9:22-76
+14
+15    <application android:name="com.appwood.mylibrarys.MyProHelperClass" >
+15-->D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:11:5-25:19
+15-->D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:11:18-50
+16        <activity android:name="com.appwood.mylibrarys.UpdateAppActivity" />
+16-->D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:12:9-55
+16-->D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:12:19-52
+17        <activity android:name="com.appwood.mylibrarys.Splash" />
+17-->D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:13:9-44
+17-->D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:13:19-41
+18
+19        <meta-data
+19-->D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:15:9-17:36
+20            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+20-->D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:16:13-69
+21            android:value="true" />
+21-->D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:17:13-33
+22        <meta-data
+22-->D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:19:9-21:118
+23            android:name="applovin.sdk.key"
+23-->D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:20:13-44
+24            android:value="VvMHQ8qTbnOUx1SS7gTV2dloZMX_RremcudgIVezo_tO0TSDTLUUkG5malJ63camEvhEOrnyLgkJm2gSniHLr2" />
+24-->D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:21:13-115
+25        <meta-data
+25-->D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:22:9-24:36
+26            android:name="applovin.sdk.verbose_logging"
+26-->D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:23:13-56
+27            android:value="true" />
+27-->D:\Running Project\ADS Demo\20-03-2022 1.0.1\1.0.1\VIP Demo\mylibrarys\src\main\AndroidManifest.xml:24:13-33
+28    </application>
+29
+30</manifest>

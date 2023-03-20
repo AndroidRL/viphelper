@@ -15,11 +15,11 @@ public class UpdateAppActivity extends AppCompatActivity {
 
     public void Update(View view) {
 
-        if (MyHelpers.Entery_UpdateApps == 1) {
-            MyHelpers.LinkopenChromeCustomTabUrl(this, "https://play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName());
+        if (MyProHelperClass.Entery_UpdateApps == 1) {
+            MyProHelperClass.LinkopenChromeCustomTabUrl(this, "https://play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName());
 
-        } else if (MyHelpers.Entery_UpdateApps == 2) {
-            MyHelpers.LinkopenChromeCustomTabUrl(this, MyHelpers.getOtherAppsShowLink());
+        } else if (MyProHelperClass.Entery_UpdateApps == 2) {
+            MyProHelperClass.LinkopenChromeCustomTabUrl(this, MyProHelperClass.getOtherAppsShowLink());
         }
     }
 
